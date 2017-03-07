@@ -8,12 +8,24 @@
 		<h1>Try to guess</h1>
 
 		<script>
-			// read user's number (popup window)
+			var usersNumber;
+			var randomNumber;
 			
 			// create a random number
 			
 			// compare the numbers
+			var min = 1;
+			var max = 5;
 			
+			randomNumber = Math.floor((Math.random() * max) + min);
+			usersNumber = prompt("Choose your number");
+			
+			if(usersNumber == randomNumber){
+				alert("Correct");
+			} else {
+				alert("Wrong");
+			}
+			console.log(randomNumber);
 			// show results (popup window)
 			
 		</script>
