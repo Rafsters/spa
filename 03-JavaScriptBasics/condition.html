@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Execute a condition</title>
-		<meta charset="UTF-8">
-	</head>
+ <head>
+  <title>Execute a condition</title>
+		<meta charset="UTF-8" />
+ </head>
 	<body>
 		<h1>Execute a condition</h1>
 		<p>Display data one the console</p>
 
 		<script>
-			// enter your name, surname
-			// ...
+			var name = "Rafal";
+			var surname = "Kwiecien";
+			var age = 22;
 			
 			// display your personal data on the console
-			// ...
+			var r = confirm(name + " " + surname + " " + age);
+			if (r == true) {
+				console.log(name + " " + surname + " " + age);
+			} else {
+				
+			}
 			
 			// 
 		</script>
