@@ -7,6 +7,23 @@
 	<body>
 		<h1>Create mobile phone</h1>
 		<script>
+		
+		var mobilePhone = {
+		
+			model: "Motrola Moto E",
+			goodthis: false,
+			ram: 1,
+			specs: {android: "Lolipop", flashlight: false},
+			screen: [540, 960],
+			
+			show: function(){
+				alert("Model: " + this.model + " Good phone: " + this.goodthis + " Ram[GB]:" + 
+				this.ram + " Android:" + this.specs.android + " Flashlight:" + this.specs.flashlight + 
+				" Screen: " + this.screen[0] + " x " + this.screen[1]);
+			}
+		};
+		
 		</script>
+		<button id="button" type="button" onclick="this.show();">Click</button>
 	</body>
 </html>

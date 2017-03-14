@@ -22,18 +22,16 @@
 			console.log("Budget: ", myFavMovie.specs.budget);
 			console.log("Language: ", myFavMovie.specs.language);
 			console.log("Digital sound: ", myFavMovie.specs.digitalSound);
-			console.log("Digital sound: ", myFavMovie.specs.toString());
-			for(i =0; myFavMovie.stars.length; i++){
+			console.log("Stars: ", myFavMovie.stars.toString());
+			for(i = 0; i < myFavMovie.stars.length; i++){
 				if(i == 0){
-					console.log("Stars: ", myFavMovie.stars[i]);
+					console.log("Stars:\n",myFavMovie.stars[i]);
 				} else {
-					console.log("", myFavMovie.stars[i]);
+					console.log( myFavMovie.stars[i]);
 				}
 				
 			}
-			//console.log("Stars: ", myFavMovie.stars);
-			//console.log("Genre: ", myFavMovie.genre);
-			// ...
+			
 			
 		</script>
 	</body>
