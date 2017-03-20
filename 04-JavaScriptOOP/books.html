@@ -7,6 +7,26 @@
 	<body>
 		<h1>Display books list</h1>
 		<script>
+		function Book(id, title, author, format, price){
+			this.id = id;
+			this.title = title;
+			this.author = author;
+			this.format = format;
+			this.price = price;
+		}
+		
+		var booksArray = [new Book(1, "The Return of Duck and Goose", "Sir Piggy", "paperback", 19.99), new Book (2, "The Adventures of Duck and Goose", "D. Cow", "hardback", 18.99),
+		new Book (3, "My Friend is a Duck", "A. Parrot", "paperback", 14.99), new Book (4, "Duck and Goose’ Cheat Sheet for Students", "Polly Parrot", "paperback", 5.99), 
+		new Book (5, "Duck and Goose’: an allegory for modern times?", "Bor Ing",  "ebook", 59.99)];
+		
+		for(i =0; i<booksArray.length; i++){
+			if(booksArray[i].format == "paperback"){
+				console.log(booksArray[i]);
+			}
+		}
+		
+		
+		
 		</script>
 	</body>
 </html>
