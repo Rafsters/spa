@@ -15,14 +15,14 @@
 						height: null,
 						enterData: function(){
 							this.weight = prompt("Choose your weight");
-							this.height = prompt("Choose your height");
+							this.height = prompt("Choose your height (meters)");
 						},
 						calculate: function(){
 							var bmi = ((this.weight) / (this.height * this.height));
 							return bmi;
 						},
 						display: function(){
-							alert("Wynik: " + this.calculate());
+							alert("Your BMI: " + this.calculate());
 						}
 				}
 				BMI.enterData();
