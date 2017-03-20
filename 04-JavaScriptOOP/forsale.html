@@ -20,30 +20,31 @@
 		House.prototype.changePrice = function(newPrice){
 			this.price = newPrice;
 		}
+		
 		House.prototype.addFacility = function(newFacility){
 			this.facilities.push(newFacility);
 		}
+		
 		House.prototype.description = function(){
-			return ("Bedrooms: " + this.bedrooms + " Facilities: " + this.facilities + " Price: " + this.price + " Address: " + this.address + " Phone: " + this.phone);
+			return ("Bedrooms: " + this.bedrooms + " | Facilities: " + this.facilities + " | Price: " + this.price + " | Address: " + this.address.city + ", " +  this.address.street + " | Phone: " + this.phone);
 		}
 	
 		var houses = [
-		new House(4, ["garage", "swimming pool"], 500000, "Krakow Rakowicka", "333 333 333"),
-		new House(3, ["garage", "garden",], 200000, "Warszawa Długa", "555 555 555"),
-		new House(3, ["garage", "swimming pool"], 500, "Katowice Szeroka", "666 666 666"),
-		new House(2, ["garden", "garage"], 50000, "Gdynia Pomorska", "222 222 222"),
-		new House(3, ["swimming pool"], 50000, "Wrocław Opolska", "111 111 111"),
+		new House(4, ["garage", "swimming pool"], 550000, {city: "Krakow", street: "Rakowicka"}, "333 333 333"),
+		new House(3, ["garage", "garden",], 200000, {city: "Warszawa", street: "Długa"}, "555 555 555"),
+		new House(3, ["garage", "swimming pool"], 500000, {city: "Gdynia", street: "Szeroka"}, "666 666 666"),
+		new House(2, ["garden", "garage"], 250000, {city: "Nowy Targ", street: "Pomorska"}, "222 222 222"),
+		new House(3, ["swimming pool"], 150000, {city: "Tarnobrzeg", street: "Opolska"}, "111 111 111"),
 		];
-		
-		
-		
+				
 		houses[1].changePrice(50000);
-		houses[2].changePrice(500);
+		houses[2].changePrice(300000);
 		houses[1].addFacility("storage");
 		houses[2].addFacility("pool");
 		houses[1].addFacility("garden");
 		houses[3].addFacility("pool");
-		for(i=0; i<=4; i++){
+		
+		for(i=0; i<houses.length; i++){
 				console.log(houses[i].description());
 			}
 		</script>
