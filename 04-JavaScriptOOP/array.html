@@ -56,7 +56,7 @@
 					lth: function(val){
 						var counter = 0;
 						for(i =0; i < this.arr.length; i++){
-							if(this.val > this.arr[i]){
+							if(val > this.arr[i]){
 								counter++;
 							}
 							
@@ -66,7 +66,7 @@
 					}	// the number of arr values less than 'val'
 			};
 			console.log("Min: " + myArray.min() + " , Max: " + myArray.max(myArray.arr) + " , Avg: " + myArray.avg());
-			console.log("Number of numbers less that your value: " + myArray.lth(this.val));
+			console.log("Number of numbers less than your value: " + myArray.lth(myArray.val));
 			
 		</script>
 	</body>
