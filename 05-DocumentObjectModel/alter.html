@@ -7,7 +7,7 @@
 	<body>
 		<h1 id="songTitle" onclick="change()">Another Brick in the Wall</h1>
 		<h3 onclick="description()">Pink Floyd</h3>
-		<p>We don't need no education<br>
+		<p id="lyrics" onclick="italic()">We don't need no education<br>
 		We don't need no thought control<br>
 		No dark sarcasm in the classroom<br>
 		Teachers leave them kids alone<br>
@@ -30,6 +30,12 @@
 			
 			function description(){
 				desc.style.visibility = "visible";
+			}
+			
+			var lyrics = document.getElementById("lyrics");
+			
+			function italic(){
+				lyrics.style.font-style = "italic";
 			}
 			
 			
