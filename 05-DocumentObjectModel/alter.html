@@ -5,8 +5,8 @@
 		<meta charset="UTF-8">
 	</head>
 	<body>
-		<h1>Another Brick in the Wall</h1>
-		<h3>Pink Floyd</h3>
+		<h1 id="songTitle" onclick="change()">Another Brick in the Wall</h1>
+		<h3 id="bandName" onlick="description()">Pink Floyd</h3>
 		<p>We don't need no education<br>
 		We don't need no thought control<br>
 		No dark sarcasm in the classroom<br>
@@ -15,12 +15,24 @@
 		All in all it's just another brick in the wall<br>
 		All in all you're just another brick in the wall</p>
 		
-		<p style="visibility: hidden;">Pink Floyd were an English rock band formed in London.<br>
+		<p id="desc" style="visibility: hidden;">Pink Floyd were an English rock band formed in London.<br>
 		They achieved international acclaim with their progressive<br>
 		and psychedelic music.</p>
 		
 		<script>
-			// a JavaScript code here ...
+			var title = document.getElementById("songTitle");
+			
+			function change(){
+				title.innerHTML = "Another Brick in the Wall Part 2";
+			}
+			
+			var bandName = document.getElementById("bandName");
+			var desc = document.getElementById("desc");
+			
+			function description(){
+				desc.style.visibility = "visible";
+			}
+			
 			
 		</script>
 	</body>
