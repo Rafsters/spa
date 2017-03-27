@@ -4,10 +4,10 @@
 		<title>Change colour</title>
 		<meta charset="UTF-8">
 	</head>
-	<body>
+	<body ondblclick="pageColor()">
 		<h1 id="songTitle" onclick="change()">Another Brick in the Wall</h1>
 		<h3 onclick="description()">Pink Floyd</h3>
-		<p id="lyrics" onclick="italic()">We don't need no education<br>
+		<p id="lyrics" onclick="italic()" onCopy="alertCopyrights()">We don't need no education<br>
 		We don't need no thought control<br>
 		No dark sarcasm in the classroom<br>
 		Teachers leave them kids alone<br>
@@ -15,10 +15,10 @@
 		All in all it's just another brick in the wall<br>
 		All in all you're just another brick in the wall</p>
 		
-		<p id="desc" style="visibility: hidden;">Pink Floyd were an English rock band formed in London.<br>
+		<p id="desc" style="visibility: hidden;" onclick="showPicture()">Pink Floyd were an English rock band formed in London.<br>
 		They achieved international acclaim with their progressive<br>
 		and psychedelic music.</p>
-		
+		<img id="picture" />
 		<script>
 			var title = document.getElementById("songTitle");
 			
@@ -35,8 +35,26 @@
 			var lyrics = document.getElementById("lyrics");
 			
 			function italic(){
-				//lyrics.style.font-style = "italic";
+				lyrics.style.fontStyle = "italic";
 			}
+			
+			//var body = document.getElementsByTagName("body");
+			
+			function pageColor(){
+				//body.style.backgroundColor = "yellow";
+				document.body.style.backgroundColor = "yellow";
+			}
+			
+			function alertCopyrights(){
+				alert("You can't copy the lyrics! Copyrights!");
+			}
+			
+			function showPicture(){
+				document.getElementById("picture").setAttribute("src", "https://upload.wikimedia.org/wikipedia/en/d/d6/Pink_Floyd_-_all_members.jpg");
+			
+			}
+			
+			
 			
 			
 		</script>
