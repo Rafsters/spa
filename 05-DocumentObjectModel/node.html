@@ -4,9 +4,56 @@
 		<title>Create DOM elements</title>
 		<meta charset="UTF-8">
 	</head>
-	<body>
+	<body onload="createTable()">
 		<script>
-			// a JavaScript code here ...
+		function createTable(){
+		
+		var table = document.createElement('table');
+		var tr = document.createElement('tr');
+		var th1 = document.createElement('th');
+		var th2 = document.createElement('th');
+		
+		tr.appendChild(th1);
+		tr.appendChild(th2);
+		table.appendChild(tr);
+		
+		th1.innerHTML = "Email";
+		th1.style.backgroundColor = "grey";
+		th1.style.border = "1px solid black";
+		
+		th2.innerHTML = "Connecting to the Internet";
+		th2.style.backgroundColor = "grey";
+		th2.style.border = "1px solid black";
+		
+		var textArray1 = ["receive/get/open an email", "exchange email addresses", "open/send/contain an attachment", "open/check your inbox"];
+		var textArray2 = ["use/access/log onto the Internet", "access/connect to/locate the server", "browse/surf/search/scour the Internet", "install/use/configure a firewall"];
+		
+		for (var i = 0; i < 4; i++) {
+			var tr = document.createElement('tr');
+			var td1 = document.createElement('td');
+			var td2 = document.createElement('td');
+			
+			tr.appendChild(td1);
+			tr.appendChild(td2);
+			
+			var text1 = document.createTextNode(textArray1[i]);
+			var text2 = document.createTextNode(textArray2[i]);
+			
+			td1.style.border = "1px solid black";
+			td2.style.border = "1px solid black";
+			
+			td1.appendChild(text1);
+			td2.appendChild(text2);
+			table.appendChild(tr);
+		}
+		document.body.appendChild(table);
+		table.style.borderCollapse = "collapse";
+				
+				
+		}
+			
+				
+			
 			
 		</script>
 	</body>
