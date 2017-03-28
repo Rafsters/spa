@@ -1,0 +1,176 @@
+{
+  "people": {
+    "person": [{
+      "name": "Kamil",
+      "surname": "Malina",
+      "age": 21,
+      "gender": "male",
+      "email": "maliniarz@interia.pl",
+      "phone": [
+        {
+          "landline": "666 666 666",
+          "mobile": "777 777 777"
+        }
+      ],
+      "address": [
+        {
+          "streetNumber": 66,
+          "homeNumber": 77,
+          "postalCode": "99-123",
+          "city": "Malinowice"
+        }
+      ],
+      "interest": [
+        "saneczkarstwo",
+        "kajakarstwo"
+      ],
+      "family": {
+        "spouse": [
+          {
+            "name": "Ola",
+            "surname": "Malina"
+          }
+        ],
+        "kids": {
+          "kid": [
+            {
+              "name": "Pawel",
+              "surname": "Malina",
+              "gender": "male",
+              "age": 3,
+              "interests": [
+                "szachy",
+                "windsurfing"
+              ]
+            },
+            {
+              "name": "Michał",
+              "surname": "Malina",
+              "gender": "male",
+              "age": 7,
+              "interests": [
+                "boks",
+                "balet"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Hubert",
+      "surname": "Cytryna",
+      "age": 28,
+      "gender": "male",
+      "email": "cytryniarz@interia.pl",
+      "phone": [
+        {
+          "landline": "666 345 345",
+          "mobile": "773 222 797"
+        }
+      ],
+      "address": [
+        {
+          "streetNumber": 64,
+          "homeNumber": 97,
+          "postalCode": "49-123",
+          "city": "Cytrynowice"
+        }
+      ],
+      "interest": [
+        "siłownia",
+        "judo"
+      ],
+      "family": {
+        "spouse": [
+          {
+            "name": "Anna",
+            "surname": "Cytryma"
+          }
+        ],
+        "kids": {
+          "kid": [
+            {
+              "name": "Jan",
+              "surname": "Cytryna",
+              "gender": "male",
+              "age": 8,
+              "interests": [
+                "pływanie",
+                "programowanie"
+              ]
+            },
+            {
+              "name": "Jerzy",
+              "surname": "Cytryna",
+              "gender": "male",
+              "age": 6,
+              "interests": [
+                "bieganie",
+                "karate"
+              ]
+            }
+          ]
+        }
+      }
+    },
+     {
+      "name": "Jerzy",
+      "surname": "Kokos",
+      "age": 29,
+      "gender": "male",
+      "email": "kokos@interia.pl",
+      "phone": [
+        {
+          "landline": "222 333 444",
+          "mobile": "777 111 555"
+        }
+      ],
+      "address": [
+        {
+          "streetNumber": 122,
+          "homeNumber": 457,
+          "postalCode": "79-123",
+          "city": "Kokos"
+        }
+      ],
+      "interest": [
+        "jedzenie",
+        "picie"
+      ],
+      "family": {
+        "spouse": [
+          {
+            "name": "Alina",
+            "surname": "Kokos"
+          }
+        ],
+        "kids": {
+          "kid": [
+            {
+              "name": "Małgorzata",
+              "surname": "Kokos",
+              "gender": "female",
+              "age": 9,
+              "interests": [
+                "książki",
+                "zapasy"
+              ]
+            },
+            {
+              "name": "Jacek",
+              "surname": "Kokos",
+              "gender": "male",
+              "age": 7,
+              "interests": [
+                "boks",
+                "taniec"
+              ]
+            }
+          ]
+        }
+      }
+    }
+    ]
+  }
+}
