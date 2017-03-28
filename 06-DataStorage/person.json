@@ -1,0 +1,45 @@
+{
+  "person":{
+    "name": "Kamil",
+    "surname": "Malina",
+    "age": 21,
+    "gender": "male",
+    "email": "maliniarz@interia.pl",
+    "phone": [{
+      "landline": "666 666 666",
+      "mobile": "777 777 777"
+    }], 
+    "address": [{
+      "streetNumber": 66,
+      "homeNumber": 77,
+      "postalCode": "99-123",
+      "city": "Malinowice"
+    }],
+    "interest": ["saneczkarstwo", "kajakarstwo"],
+    "family": {
+      "spouse": [{
+        "name": "Ola",
+        "surname": "Malina"
+      }],
+      "kids": {
+        "kid": [{
+          "name": "Pawel",
+          "surname": "Malina",
+          "gender": "male",
+          "age": 3,
+          "interests": ["szachy", "windsurfing"]
+        },
+        {
+          "name": "Michał",
+          "surname": "Malina",
+          "gender": "male",
+          "age": 7,
+          "interests": ["boks", "balet"]
+        }
+        ]
+      }
+        
+      
+    }
+  }
+}
