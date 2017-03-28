@@ -3,6 +3,7 @@
 	<head>
 		<title>Fill in a form</title>
 		<meta charset="UTF-8">
+			<script src="jquery-3.1.1.min.js"></script>
 			<!-- Latest compiled and minified CSS -->
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -13,7 +14,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<form class="form-horizontal">
+		<form class="form-horizontal" onsubmit="submitData()">
 			<legend >PERSONAL DATA</legend>
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="surname">Surname (family name):</label>
@@ -33,11 +34,11 @@
             <label class="control-label col-sm-2" for="gender">Gender</label>
             <div class="col-sm-10">
                 <label class="radio-inline">
-                    <input checked="checked" data-val="true" data-val-required="The IsSmallBusiness field is required." id="gender" name="gender" type="radio" value="False">
+                    <input checked="checked" data-val="true" data-val-required="The IsSmallBusiness field is required." id="gender" name="gender" type="radio" value="Male">
                     Male
                 </label>
                 <label class="radio-inline">
-                    <input id="gender" name="gender" type="radio" value="True">
+                    <input id="gender" name="gender" type="radio" value="Female">
                     Female
                 </label>
 			</div>
@@ -74,12 +75,12 @@
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="citizenship">Citizenship (country):</label>
 				<div class="col-sm-10">
-					<select class="form-control">
-						<option value="poland">Poland</option>
-						<option value="germany">Germany</option>
-						<option value="russia"> Russia</option>
-						<option value="italy">Italy</option>
-						<option value="sweden">Sweden</option>
+					<select class="form-control" id="citizenship">
+						<option value="Poland">Poland</option>
+						<option value="Germany">Germany</option>
+						<option value="Russia"> Russia</option>
+						<option value="Italy">Italy</option>
+						<option value="Sweden">Sweden</option>
 					</select>
 
 				</div>
@@ -90,8 +91,19 @@
 			</div>
 		
 		<script>
-			// a JavaScript code here ...
-			
+		
+			function submitData(){
+				var surname = document.getElementById("surname");
+				var name = document.getElementById("name");
+				var gender = document.getElementById("gender");
+				var fathersName = document.getElementById("fathersName");
+				var mothersName = document.getElementById("mothersName");
+				var birthDate = document.getElementById("birthDate");
+				var birthPlace = document.getElementById("birthPlace");
+				var citizenship = document.getElementById("citizenship");
+				alert(surname.value + " " + name.value + " " + gender.value  + " " + fathersName.value + " " + mothersName.value + " " + birthDate.value + " " + birthPlace.value + " " + citizenship.value);
+			}
+						
 		</script>
 	</body>
 </html>
