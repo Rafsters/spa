@@ -14,7 +14,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<form class="form-horizontal" onsubmit="submitData()">
+		<form class="form-horizontal">
 			<legend >PERSONAL DATA</legend>
 			<div class="form-group">
 				<label class="control-label col-sm-2" for="surname">Surname (family name):</label>
@@ -91,7 +91,35 @@
 			</div>
 		
 		<script>
-		
+			var form = document.getElementsByTagName('form')[0];
+			var formData = {
+				surname: '',
+				name: '',
+				gender: '',
+				fatherName: '',
+				mothersName: '',
+				birthDate: '',
+				birthPlace: '',
+				citizenship: '',
+				display: function() {
+					console.log(this);
+				}
+			};
+			form.addEventListener('submit', function(event) {
+				formData.surname = document.getElementById('surname').value;
+				formData.name = document.getElementById('name').value;
+				formData.gender = document.getElementById('gender').value;
+				formData.fathersName = document.getElementById('fathersName').value;
+				formData.mothersName = document.getElementById('mothersName').value;
+				formData.birthDate = document.getElementById('birthDate').value;
+				formData.birthPlace = document.getElementById('birthPlace').value;
+				formData.citizenship = document.getElementById('citizenship').value;
+				
+				formData.display();
+				
+				event.preventDefault();
+			});
+			/*
 			function submitData(){
 				var surname = document.getElementById("surname");
 				var name = document.getElementById("name");
@@ -103,7 +131,7 @@
 				var citizenship = document.getElementById("citizenship");
 				alert(surname.value + " " + name.value + " " + gender.value  + " " + fathersName.value + " " + mothersName.value + " " + birthDate.value + " " + birthPlace.value + " " + citizenship.value);
 			}
-						
+			*/			
 		</script>
 	</body>
 </html>
