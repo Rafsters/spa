@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test SQL</title>
+</head>
+<body>
+    <script>
+       function checkTime(size){
+		var start = new Date().getTime();
+		/*
+		
+		*/
+		var end = new Date().getTime();
+		var time = end - start;
+		console.log('Execution time for '  + size + " values "+ time + "ms");
+		}
+		
+		checkTime(100000);
+        
+    </script>
+</body>
+</html>
