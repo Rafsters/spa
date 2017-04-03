@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Test Storage</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    
+	<script>
+    function checkTime(size){
+	var start = new Date().getTime();
+	for(var i=0; i<size; i++){		 
+		 localStorage.setItem("number" + i, Math.floor(Math.random() * 100));
+	}
+	
+	var end = new Date().getTime();
+	var time = end - start;
+	console.log('Execution time for '  + size + " items "+ time + "ms");
+	}
+	
+	checkTime(1000);
+	localStorage.clear();
+	checkTime(10000);
+	localStorage.clear();
+	checkTime(100000);
+	
+    </script>
+</body>
+
+</html>
+
+
+	
+        
