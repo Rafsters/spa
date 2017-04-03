@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+<body>
+	<form>
+		Login:<br>
+		<input type="text" id="login"><br>
+		Password:<br>
+		<input type="password" id="password"><br><br>
+		<button type="button" onclick="check()" id="login">Log in</button><br><br>
+	
+	</form>
+    <script>
+	
+		var login = localStorage.getItem("username");
+		var password= localStorage.getItem("password");
+		
+		var loginInput =  document.getElementById("login");
+        var passwordInput =  document.getElementById("password");
+		
+		function check(){
+			if(login == loginInput){
+				alert("User logged successfuly!");
+			} else{
+				alert("Wrong login or password");
+			}
+		
+		}
+        
+    </script>
+</body>
+</html>
