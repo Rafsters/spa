@@ -1,43 +1,40 @@
 <!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form</title>
+    <meta charset="UTF-8">
 </head>
+
 <body>
-	<form>
-		Name:<br>
-		<input type="text" id="name"><br>
-		Surname:<br>
-		<input type="text" id="surname"><br><br>
-		<button type="button" id="save">Save</button><br><br>
-		<button type="button" id="restore">Restore</button>
-	
-	</form>
+    <form>
+        Name:<br>
+        <input type="text" id="name"><br> Surname:
+        <br>
+        <input type="text" id="surname"><br><br>
+        <button type="button" onclick="save()">Save</button>
+        <button type="button" onclick="restore()">Restore</button>
+    </form>
     <script>
-	
-		
-		var save =  document.getElementById("save");
-        var restore =  document.getElementById("restore");
-							
+    function save(){
         var name = document.getElementById("name");
-        var surname =  document.getElementById("surname");
-		
-        save.addEventListener('click', function(event) {
-            event.preventDefault();
-            localStorage.setItem("name", name.value);
-            localStorage.setItem("surname", surname.value);
-        });
-		
-        restore.addEventListener('click', function(event) {
-            event.preventDefault();
-			var localName = localStorage.getItem("name");
-			var localSurname = localStorage.getItem("surname");
-            name.value = localName;
-            surname.value = localSurname;
-        });
-        
+		var surname = document.getElementById("surname");
+        localStorage.setItem("name", name.value);
+        localStorage.setItem("surname", surname.value);
+    }
+    function restore(){
+        var name = localStorage.getItem("name");
+		var surname = localStorage.getItem("surname");
+        var nameInput = document.getElementById("name");
+		var surnameInput = document.getElementById("surname");
+        nameInput.value = name;
+        surnameInput.value = surname;
+    }
     </script>
 </body>
+
 </html>
+
+
+	
+        
