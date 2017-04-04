@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 		<title>Employee</title>
 		<meta charset="UTF-8">
 	</head>
@@ -9,7 +11,11 @@
 		<p></p>
 		
 		<script>
-			// a JavaScript code here ...
+			$.getJSON("employee.json", function(json){
+				console.log(json);
+			}
+			var j = JSON.stringify(json);
+			console.log(j);
 			
 		</script>
 	</body>

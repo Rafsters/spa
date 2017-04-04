@@ -3,13 +3,19 @@
 	<head>
 		<title>My favourite film</title>
 		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 	</head>
 	<body>
 		<h1>My favourite film</h1>
-		<p></p>
-		
+		<p id="p1"></p>
+		<button>Load</button>
 		<script>
-			// a JavaScript code here ...
+			$(document).ready(function(){
+			$("button").click(function(){
+			$("#p1").load("http://v-ie.uek.krakow.pl/~s187161/myfilm.txt");
+			});
+			}); 
 			
 		</script>
 	</body>
