@@ -6,17 +6,26 @@
 </head>
 <body>
     <script>
-       function checkTime(size){
-		var start = new Date().getTime();
-		/*
-		
-		*/
-		var end = new Date().getTime();
-		var time = end - start;
-		console.log('Execution time for '  + size + " values "+ time + "ms");
-		}
-		
-		checkTime(100000);
+       function random() {
+            var number = Math.floor(Math.random() * 1000);
+            return number;
+        }
+        function checkTime(db) {
+            var start = Date.now();
+            db.transaction(function (tx) {
+                for (var i = 0; i < 10000; i++) {
+                    tx.executeSql('insert into testsql (number)  VALUES (?)', [random()]);
+                }
+            });
+            var end = Date.now() - start;
+            console.log("Inserting took " + end + " miliseconds.");
+        }
+        var db = openDatabase('testsql', '1.0', 'testsql', 2 * 1024 * 1024);
+        db.transaction(function (tx) {
+            tx.executeSql("DROP TABLE IF EXISTS testsql");
+            tx.executeSql('CREATE TABLE IF NOT EXISTS testsql(number)');
+        });
+        checkTime(db);
         
     </script>
 </body>
