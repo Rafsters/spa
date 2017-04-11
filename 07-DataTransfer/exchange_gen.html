@@ -28,9 +28,9 @@ RawBlameHistory
 </head>
 
 <body>
-    <button type="button" onclick="showDiv()">currency</button>
+    <button type="button" onclick="showDiv()">Generate</button>
 
-    <div id ="cu"  style="display:none;">
+    <div id ="content"  style="display:none;">
     <h2>EUR:</h2>
     <p id="eur"></p>
     <h2>USD:</h2>
@@ -54,7 +54,7 @@ RawBlameHistory
             $('#chf').html(jd.rates[0].mid);
         });
         function showDiv() {
-            document.getElementById('cu').style.display = "block";
+            document.getElementById('content').style.display = "block";
         }
     </script>
 </body>
