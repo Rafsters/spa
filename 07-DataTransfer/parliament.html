@@ -8,12 +8,12 @@
 </head>
 
 <body>
-    <ul id="list"></ul>
+    <div id="content"></div>
 
     <script>
         $.getJSON("https://api-v3.mojepanstwo.pl/dane/poslowie.json", function (json) {
             var text = JSON.stringify(json);
-            $('#list').html(text);
+            $('#content').html(text);
         });
     </script>
 </body>
