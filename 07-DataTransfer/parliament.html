@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parliament</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul id="list"></ul>
+
+    <script>
+        $.getJSON("https://api-v3.mojepanstwo.pl/dane/poslowie.json", function (json) {
+            var text = JSON.stringify(json);
+            $('#list').html(text);
+        });
+    </script>
+</body>
+
+</html>
