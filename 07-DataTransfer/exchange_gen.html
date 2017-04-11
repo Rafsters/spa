@@ -1,0 +1,62 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @Rafsters
+ Sign out
+ Watch 0
+  Star 0
+  Fork 36 Coud95/spa
+forked from stalj/spa
+ Code  Pull requests 0  Projects 0  Wiki  Pulse  Graphs
+Branch: master Find file Copy pathspa/07-DataTransfer/exchangerate.html
+09ee523  19 hours ago
+@Coud95 Coud95 some changes
+1 contributor
+RawBlameHistory     
+44 lines (38 sloc)  1.17 KB
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exchange</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <button type="button" onclick="showDiv()">currency</button>
+
+    <div id ="cu"  style="display:none;">
+    <h2>EUR:</h2>
+    <p id="eur"></p>
+    <h2>USD:</h2>
+    <p id="usd"></p>
+    <h2>GBP:</h2>
+    <p id="gbp"></p>
+    <h2>CHF:</h2>
+    <p id="chf"></p>
+    </div>
+    <script>
+        $.getJSON("http://api.nbp.pl/api/exchangerates/rates/A/EUR/", function (jd) {
+            $('#eur').html(jd.rates[0].mid);
+        });
+        $.getJSON("http://api.nbp.pl/api/exchangerates/rates/A/USD/", function (jd) {
+            $('#usd').html(jd.rates[0].mid);
+        });
+        $.getJSON("http://api.nbp.pl/api/exchangerates/rates/A/GBP/", function (jd) {
+            $('#gbp').html(jd.rates[0].mid);
+        });
+        $.getJSON("http://api.nbp.pl/api/exchangerates/rates/A/CHF/", function (jd) {
+            $('#chf').html(jd.rates[0].mid);
+        });
+        function showDiv() {
+            document.getElementById('cu').style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
