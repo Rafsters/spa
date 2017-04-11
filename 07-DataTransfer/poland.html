@@ -3,19 +3,32 @@
 	<head>
 		<title>Poland</title>
 		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	</head>
 	<body>
 		<h1>Official name</h1>
-		<p></p>
+		<p id="name"></p>
 		
 		<h1>Capital city</h1>
-		<p></p>
+		<p id="capital"></p>
+		
+		<h1>Germany name</h1>
+		<p id="gname"></p>
+		
+		<h1>Region</h1>
+		<p id="region"></p>
 
 		<h1>Countries bordering</h1>
-		<p></p>
+		<p id="border"></p>
 
 		<script>
-			// a JavaScript code here ...
+			$.getJSON("poland.json", function(jd) {
+            $('#name').html(jd.name.official);
+			$('#gname').append(jd.translations.deu);
+            $('#capital').append(jd.capital);
+			$('#region').append(jd.region);
+            $('#border').append(jd.borders.toString());
+            });
 			
 		</script>
 	</body>

@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <button type="button" onclick="showDiv()">Generate</button>
+    <button type="button" onclick="show()">Generate</button>
 
     <div id ="content"  style="display:none;">
     <h2>EUR:</h2>
@@ -34,7 +34,7 @@
         $.getJSON("http://api.nbp.pl/api/exchangerates/rates/A/CHF/", function (jd) {
             $('#chf').html(jd.rates[0].mid);
         });
-        function showDiv() {
+        function show() {
             document.getElementById('content').style.display = "block";
         }
     </script>
